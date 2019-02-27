@@ -14,8 +14,8 @@ function MyRouter() {
         <React.Fragment>
             <NavLinks/>
             <Switch>            
-            <Route path='/tacos/:id/:userid' component={TacosFeed}/>
             <Route path='/twitter' render={(props)=><TwitterFeed data={data} {...props}/>}/>
+            <Route path='/tacos/:id/:userid' component={TacosFeed}/>
             <Route path='/tacos' component={TacosFeed}/>
             <Route path='/' component={HomePage}/>
             </Switch>

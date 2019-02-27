@@ -7,7 +7,7 @@ function NavLinks() {
         <Link to="/">Home Page </Link>
         <Link to="/tacos">Tacos Feed </Link>
         <Link to="/tacos/10/20">Tacos with id 10_20 </Link>
-        <Link to="/twitter">Twitter Feed </Link>
+        <Link to="/twitter?searchTerm=obama&year=2016&topic=anything">Twitter Feed </Link>
         
     </div>
   )
