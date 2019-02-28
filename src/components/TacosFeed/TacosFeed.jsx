@@ -1,6 +1,7 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
-function TacosFeed({match, history}) {
+function TacosFeed({match, history, userIsLoggedIn}) {
   console.log(history)
 
   const onClickBack = () =>{
@@ -11,6 +12,7 @@ function TacosFeed({match, history}) {
     history.go(2)
 }
 
+if (userIsLoggedIn){
   return (
     <div>
       <h1>This is Tacos Feed</h1>
@@ -20,6 +22,10 @@ function TacosFeed({match, history}) {
       <button onClick={onClickForward}>Forward</button>
     </div>
   )
+} else{
+  return <Redirect to='/unauthorized'/>
+}
+ 
 }
 
 export default TacosFeed
